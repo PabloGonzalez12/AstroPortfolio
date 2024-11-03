@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	hrefExecutable: string;
+	hrefCode: string;
+	image: string;
+}
+
+const { hrefCode, hrefExecutable, title, description, image } = Astro.props;
+---
+
+
+
+<div class="card glass w-96">
+	<figure>
+		<img
+		src={image}
+		alt="car!" />
+	</figure>
+	<div class="card-body">
+		<h2 class="card-title">{title}</h2>
+		<p>{description}</p>
+		<div class="card-actions justify-around">
+			<button class="btn btn-primary w-32"><a class="w-32" href={hrefCode}>&lt;/&gt;</a></button>
+			<button class="btn btn-primary w-32"><a class="w-32" href={hrefExecutable}>▶</a></button>
+		</div>
+	</div>
+</div>
+
