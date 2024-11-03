@@ -14,16 +14,16 @@ const { hrefCode, hrefExecutable, title, description, image } = Astro.props;
 
 <div class="card glass w-96">
 	<figure>
-		<img
+		<img class="h-80"
 		src={image}
-		alt="car!" />
+		alt="card" />
 	</figure>
-	<div class="card-body">
+	<div class="card-body gap-5">
 		<h2 class="card-title">{title}</h2>
 		<p>{description}</p>
 		<div class="card-actions justify-around">
-			<button class="btn btn-primary w-32"><a class="w-32" href={hrefCode}>&lt;/&gt;</a></button>
-			<button class="btn btn-primary w-32"><a class="w-32" href={hrefExecutable}>▶</a></button>
+			<a style="font-size: 1.5rem;"target="_blank" class="w-36 btn btn-primary" href={hrefCode}>&lt;/&gt;</a>
+			<a style="font-size: 1.5rem;" target="_blank" class="w-36 btn btn-primary" href={hrefExecutable}>▶</a>
 		</div>
 	</div>
 </div>
